@@ -26,51 +26,72 @@ $(document).ready(function() {
     var playerLosses = 0;
 
     // --GAME LOGIC BELOW--
-
     
+    function gamePlay() {
+        
+        $("#crystalOne").click(function () {
+            myScore = myScore + numOne;
+            $("#playerScore").text(myScore);
+            console.log(myScore);
+            endGame();
+        })
 
+        $("#crystalTwo").click(function () {
+            myScore = myScore + numTwo;
+            $("#playerScore").text(myScore);
+            console.log(myScore);
+            endGame();
+        })
 
+        $("#crystalThree").click(function () {
+            myScore = myScore + numThree;
+            $("#playerScore").text(myScore);
+            console.log(myScore);
+            endGame();
+        })
 
+        $("#crystalFour").click(function () {
+            myScore = myScore + numFour;
+            $("#playerScore").text(myScore);
+            console.log(myScore);
+            endGame();
+        })
+    }
 
+    function reset() {
+        var numOne = Math.floor(Math.random()* 13);
+        var numTwo = Math.floor(Math.random()* 13);
+        var numThree = Math.floor(Math.random()* 13);
+        var numFour = Math.floor(Math.random()* 13);
+        var myScore = 0;
+        $("#playerScore").text(myScore);
+        var minNumber = 19;
+        var maxNumber = 120;
+        var randomScore = randomFromRange(minNumber, maxNumber);
+    
+            function randomFromRange(min,max) {
+                return Math.floor(Math.random()*(max-min+1)+min);
+            }
+            console.log(randomScore);
+            $("#scoreToHit").text(randomScore);
+        gamePlay();           
+    }
 
+    function endGame() {
+        if (myScore === randomScore) {
+            alert("You win!");
+            playerWins++;
+            $("#wins").text(playerWins);
+            reset();        
+        } 
+        else if (myScore > randomScore) {
+            alert("You lose!");
+            playerLosses++;
+            $("#losses").text(playerLosses);
+            reset();
+        }
+    }
 
-
-    // function addToScore(val) {
-    //     var numberToAdd = parseInt(val);
-    //     var currentScore = parseInt(myScore.innerHTML);
-    //     myScore.innerHTML = numberToAdd + currentScore;
-    // }
-
-    // numOne.addEventListener("click", function() {
-    //     addToScore(this.value);
-    //     checkPlayerScore();
-    // });
-
-    // numTwo.addEventListener("click", function() {
-    //     addToScore(this.value);
-    //     checkPlayerScore();
-    // });
-
-    // numThree.addEventListener("click", function() {
-    //     addToScore(this.value);
-    //     checkPlayerScore();
-    // });
-
-    // numFour.addEventListener("click", function() {
-    //     addToScore(this.value);
-    //     checkPlayerScore();
-    // });
-
-    // function checkPlayerScore() {
-    //     var playerInt = parseInt(myScore.innerHTML);
-    //     var targetInt = parseInt(randomScore.innerHTML);
-    //     if (playerInt === targetInt) {
-    //         // You're a winner! How to get this to add up?
-    //     } else if (playerInt > targetInt) {
-    //         // You lose the game. Restart?
-    //     } 
-    // }
-
-    // // I can't quite figure out how to set the win condition here.
+    gamePlay();
 
 });
