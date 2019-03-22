@@ -1,13 +1,17 @@
+body {
+    background-image: url("../images/geometry2.png");
+}
+
 .container {
     display:inline-block;
     width:100%;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 h1 {
-    margin-top:3rem;
-    margin-bottom:3rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
     font-weight:bold;
     font-size: 3rem;
     text-align:center;
@@ -15,23 +19,41 @@ h1 {
 }
 
 .gameName {
-    background:lightcoral;
+    background:rgba(240, 128, 128, 0.7);
 }
 
 .bodyText {
     font-size: 14pt;
-    background: lightgreen;
+    background: rgba(144, 238, 144, 0.7);
     text-align: left;
     width: 50%;
     margin-left:23%;
     padding:2rem;
+    border-radius:8px;
 }
 
 .row {
     font-size: 14pt;
-    background:lightsalmon;
+    background:hsla(17, 100%, 74%, 0.7);
     text-align: left;
     width: 50%;
     margin-left:23%;
+    margin-bottom:1rem;
     padding:2rem;
+    border-radius:8px;
 }
+
+.myImages {
+    text-align: center;
+}
+
+.crystalImage {
+    width: 18%;
+    margin-left:3px;
+    margin-right:3px;
+}
+
+.column {
+    padding-top:3px;
+}
+
