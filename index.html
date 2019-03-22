@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabbi's CrystalsCollector Game</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="gameName">CrystalsCollector!</h1>
+
+        <p class="bodyText">You will be given a random number at the start of the game.<br><br>
+        There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.<br><br>
+        You win the game by matching your total score to the ramdom number, you lose the game if your total score goes above the random number.<br><br>
+        The value of each crystal is hidden from you until you click on it.<br><br>
+        Each time when the game starts, the game will change the values of each crystal.</p><br>
+
+        <div class="row">
+
+            <h3 class="column">Score to Hit: 
+                <span id="scoreToHit">0</span>
+            </h3>
+            
+            <h3 class="column">My Score:
+                <span id="playerScore">0</span>
+            </h3>
+
+            <h3 class="column">Wins:
+                <span class="wins">0</span>
+            </h3>
+
+            <h3 class="column">Losses:
+                <span class="losses">0</span>
+            </h3>
+        
+        <br>
+            
+        <div class="buttons">
+            <button class="crystalImage" id="crystalOne" value="4">Crystal 1</button>
+            <button class="crystalImage" id="crystalTwo" value="7">Crystal 2</button>
+            <button class="crystalImage" id="crystalThree" value="10">Crystal 3</button>
+            <button class="crystalImage" id="crystalFour" value="5">Crystal 4</button>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    
+</body>
+</html>
+
+
+

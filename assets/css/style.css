@@ -1,0 +1,37 @@
+.container {
+    display:inline-block;
+    width:100%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+h1 {
+    margin-top:3rem;
+    margin-bottom:3rem;
+    font-weight:bold;
+    font-size: 3rem;
+    text-align:center;
+    padding:2rem;
+}
+
+.gameName {
+    background:lightcoral;
+}
+
+.bodyText {
+    font-size: 14pt;
+    background: lightgreen;
+    text-align: left;
+    width: 50%;
+    margin-left:23%;
+    padding:2rem;
+}
+
+.row {
+    font-size: 14pt;
+    background:lightsalmon;
+    text-align: left;
+    width: 50%;
+    margin-left:23%;
+    padding:2rem;
+}
